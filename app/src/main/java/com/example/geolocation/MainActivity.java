@@ -43,18 +43,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize views
+        // We will initialize the views by ids
         latitudeTextView = findViewById(R.id.latitudeTextView);
         longitudeTextView = findViewById(R.id.longitudeTextView);
         locationButton = findViewById(R.id.LocationButton);
 
-        // Set up location request
+        // We will set up location request
         locationRequest = LocationRequest.create();
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         locationRequest.setInterval(5000);
         locationRequest.setFastestInterval(2000);
 
-        // Set up the button click listener to get the current location
+        //This button will fetch the current location
         locationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                                         double latitude = locationResult.getLocations().get(index).getLatitude();
                                         double longitude = locationResult.getLocations().get(index).getLongitude();
 
-                                        // Update the TextViews with the latitude and longitude
+                                        // The coordinates are fetched and displayed in corresponding text views
                                         latitudeTextView.setText("Latitude: " + latitude);
                                         longitudeTextView.setText("Longitude: " + longitude);
                                     }
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                             break;
                         case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
-                            // Device does not have location settings enabled
+                            // If the location settings is not enabled, it will break.
                             break;
                     }
                 }
