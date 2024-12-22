@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Title"
+        android:textAlignment="center"
+        android:layout_gravity="top"
+        android:textSize="15pt"
+        android:textColor="@color/Blue"
+        android:background="@color/TitleBackground" />
+
+    <TextView
+        android:id="@+id/latitudeTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Latitude:"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="350dp"
+        android:background="#87CEFA"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/longitudeTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Longitude:"
+        android:textSize="16sp"
+        android:background="#87CEFA"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/LocationButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Get Current Location"
+        android:backgroundTint="@color/TitleBackground"
+        app:cornerRadius="0dp" />
+
+    <FrameLayout
+        android:id="@+id/mapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center" />
+</LinearLayout>
